@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050816;
+    color:#ffffff;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+#particles{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:24px 8%;
+}
+
+.logo{
+    color:#00d4ff;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#cfd8ff;
+}
+
+.hero{
+    min-height:90vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    padding:0 10%;
+}
+
+.hero-tag{
+    color:#00d4ff;
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero h2{
+    max-width:900px;
+    margin:auto;
+
+    font-size:2rem;
+    font-weight:300;
+    line-height:1.4;
+}
+
+.hero p{
+    max-width:700px;
+    margin:30px auto;
+
+    color:#a9b4d0;
+    line-height:1.8;
+}
+
+.cta-btn{
+    display:inline-block;
+
+    padding:14px 30px;
+
+    border:1px solid #00d4ff;
+    border-radius:50px;
+
+    text-decoration:none;
+    color:#00d4ff;
+
+    transition:.3s;
+}
+
+.cta-btn:hover{
+    background:#00d4ff;
+    color:#000;
+}
+
+.section{
+    padding:120px 10%;
+}
+
+.section h3{
+    font-size:2.2rem;
+    margin-bottom:60px;
+
+    text-align:center;
+}
+
+.philosophy-card{
+    max-width:900px;
+    margin:auto;
+
+    padding:50px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.02);
+
+    backdrop-filter:blur(12px);
+}
+
+.philosophy-card p{
+    line-height:1.9;
+    color:#b7c2dd;
+    margin-bottom:25px;
+}
+
+.mission{
+    color:#00d4ff;
+    font-size:1.5rem;
+    font-weight:600;
+}
+
+.question-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+}
+
+.question-card{
+    padding:30px;
+
+    border-radius:20px;
+
+    background:#0b1022;
+
+    transition:.3s;
+}
+
+.question-card:hover{
+    transform:translateY(-8px);
+}
+
+.question-card span{
+    color:#00d4ff;
+}
+
+.question-card h4{
+    margin-top:15px;
+    line-height:1.6;
+}
+
+.domains{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:24px;
+}
+
+.domain-card{
+    padding:28px;
+
+    background:#0b1022;
+
+    border-radius:18px;
+}
+
+.domain-card h4{
+    margin-bottom:15px;
+}
+
+.domain-card p{
+    color:#9eb0d0;
+}
+
+footer{
+    text-align:center;
+
+    padding:80px 10%;
+
+    color:#8c99b6;
+}

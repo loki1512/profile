@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:#050816;
+
+    color:white;
+
+    overflow-x:hidden;
+}
+
+#particles{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+}
+
+/* NAV */
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px 8%;
+}
+
+.logo{
+
+    color:#00d4ff;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:30px;
+}
+
+.nav-links a{
+
+    color:#b7c5df;
+
+    text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+
+    padding:100px 10%;
+
+    text-align:center;
+}
+
+.section-label{
+
+    color:#00d4ff;
+
+    letter-spacing:4px;
+}
+
+.hero h1{
+
+    margin-top:20px;
+
+    font-size:4rem;
+}
+
+.hero p{
+
+    margin-top:20px;
+
+    color:#9fb1cf;
+
+    max-width:700px;
+
+    margin-left:auto;
+    margin-right:auto;
+
+    line-height:1.8;
+}
+
+/* CONTAINER */
+
+.container{
+
+    width:min(1300px,90%);
+
+    margin:auto;
+
+    margin-bottom:80px;
+}
+
+/* CENTRAL */
+
+.central-card{
+
+    padding:60px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,0.03);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    text-align:center;
+
+    backdrop-filter:blur(12px);
+}
+
+.central-card h2{
+
+    margin-top:20px;
+
+    font-size:2rem;
+
+    line-height:1.4;
+}
+
+.central-card p{
+
+    margin-top:20px;
+
+    color:#9fb1cf;
+}
+
+/* TITLES */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+    font-size:2.5rem;
+}
+
+/* LABELS */
+
+.card-label{
+
+    color:#00d4ff;
+
+    font-size:.8rem;
+
+    letter-spacing:3px;
+}
+
+/* ACADEMICS */
+
+.academics-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+}
+
+.academic-tile{
+
+    background:rgba(255,255,255,0.03);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:24px;
+
+    padding:40px;
+
+    backdrop-filter:blur(12px);
+
+    transition:.3s;
+}
+
+.academic-tile:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#00d4ff66;
+}
+
+.academic-tile h3{
+
+    margin-top:15px;
+
+    font-size:1.8rem;
+}
+
+.subtitle{
+
+    margin-top:12px;
+
+    color:#b8c7e0;
+}
+
+.metric{
+
+    margin:25px 0;
+
+    color:#00d4ff;
+
+    font-weight:600;
+
+    font-size:1.2rem;
+}
+
+.academic-tile p{
+
+    color:#aab8d4;
+
+    line-height:1.8;
+}
+
+.academic-tile ul{
+
+    margin-top:20px;
+
+    padding-left:18px;
+
+    line-height:2;
+}
+
+.academic-tile a{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    color:#00d4ff;
+
+    text-decoration:none;
+}
+
+/* OTHER CARDS */
+
+.cards-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+}
+
+.domain-card{
+
+    background:rgba(255,255,255,0.03);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    backdrop-filter:blur(12px);
+
+    transition:.3s;
+}
+
+.domain-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#00d4ff66;
+}
+
+.domain-card h3{
+
+    margin-top:15px;
+
+    margin-bottom:15px;
+}
+
+.domain-card p{
+
+    color:#aab8d4;
+
+    line-height:1.8;
+}
+
+.highlight{
+
+    margin:20px 0;
+
+    color:#00d4ff;
+
+    font-weight:600;
+}
+
+.domain-card ul{
+
+    padding-left:18px;
+
+    line-height:2;
+}
+
+.domain-card a{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    color:#00d4ff;
+
+    text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+
+    text-align:center;
+
+    padding:80px 0;
+
+    color:#7f8ea9;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .academics-grid{
+        grid-template-columns:1fr;
+    }
+}
