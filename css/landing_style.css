@@ -29,17 +29,22 @@ body{
     align-items:center;
 
     padding:24px 8%;
+
+    gap:24px;
 }
 
 .logo{
     color:#00d4ff;
     font-weight:700;
     letter-spacing:2px;
+    text-decoration:none;
 }
 
 .nav-links{
     display:flex;
     gap:28px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
 }
 
 .nav-links a{
@@ -206,4 +211,16 @@ footer{
     padding:80px 10%;
 
     color:#8c99b6;
+}
+
+@media(max-width:700px){
+
+    .navbar{
+        flex-direction:column;
+    }
+
+    .nav-links{
+        justify-content:center;
+        gap:18px;
+    }
 }

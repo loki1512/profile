@@ -67,6 +67,8 @@ body{
     align-items:center;
 
     padding:24px 8%;
+
+    gap:24px;
 }
 
 .logo{
@@ -86,6 +88,8 @@ body{
 
     display:flex;
     gap:30px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
 }
 
 .nav-links a{
@@ -553,6 +557,13 @@ blockquote{
         flex-direction:column;
 
         gap:15px;
+    }
+
+    .nav-links{
+
+        justify-content:center;
+
+        gap:18px;
     }
 }
 .journey-node{
