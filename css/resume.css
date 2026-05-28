@@ -121,6 +121,12 @@ body{
         0 0 28px rgba(0,212,255,.28);
 }
 
+.top-actions  a{
+
+    text-decoration: none;
+    color:inherit;
+}
+
 /* ================================= */
 /* RESUME SHELL */
 /* ================================= */
