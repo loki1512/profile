@@ -80,7 +80,7 @@ document.getElementById("resume-qr"),
 
     colorDark:"#ffffff",
 
-    colorLight:"#07111f",
+    #colorLight:"#ffffff",
 
     correctLevel:
     QRCode.CorrectLevel.H

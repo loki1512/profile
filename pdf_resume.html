@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loknath Sai Gurijala — Resume</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --page-w: 8.5in;
+    --page-h: 11in;
+    --margin-x: 0.55in;
+    --margin-y: 0.38in;
+    --body-font: 'EB Garamond', Georgia, serif;
+    --ink: #111;
+    --rule: #888;
+    --size-name: 26pt;
+    --size-section: 10.5pt;
+    --size-body: 10pt;
+    --size-small: 9.5pt;
+  }
+
+  html, body {
+    background: #d4cfc8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 32px 16px;
+    font-family: var(--body-font);
+  }
+
+  /* ── PAGE ── */
+  .page {
+    width: var(--page-w);
+    min-height: var(--page-h);
+    background: #fff;
+    color: var(--ink);
+    padding: var(--margin-y) var(--margin-x);
+    box-shadow: 0 4px 40px rgba(0,0,0,.22);
+    position: relative;
+  }
+
+  /* ── HEADER ── */
+  .r-name {
+    text-align: center;
+    font-size: var(--size-name);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+
+  .r-contact {
+    text-align: center;
+    font-size: var(--size-small);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 6px;
+    line-height: 1.6;
+  }
+
+  .r-contact a { color: inherit; text-decoration: none; }
+  .r-contact a:hover { text-decoration: underline; }
+  .r-contact .sep { color: var(--rule); }
+
+  /* ── SECTION ── */
+  .r-section { margin-top: 7px; }
+
+  .r-section-title {
+    font-size: var(--size-section);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 1.2px solid var(--ink);
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+  }
+
+  /* ── ENTRY (experience / project) ── */
+  .r-entry { margin-bottom: 5px; }
+
+  .r-entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 2px 8px;
+  }
+
+  .r-entry-left { display: flex; flex-direction: column; gap: 0; }
+
+  .r-org {
+    font-size: var(--size-body);
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .r-role {
+    font-size: var(--size-body);
+    font-style: italic;
+    line-height: 1.3;
+  }
+
+  .r-date {
+    font-size: var(--size-body);
+    white-space: nowrap;
+    color: #333;
+  }
+
+  /* ── BULLETS ── */
+  .r-bullets {
+    margin-top: 2px;
+    padding-left: 14px;
+    list-style: disc;
+  }
+
+  .r-bullets li {
+    font-size: var(--size-body);
+    line-height: 1.38;
+    margin-bottom: 1px;
+    color: #1a1a1a;
+  }
+
+  /* ── EDUCATION GRID ── */
+  .r-edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 2px 8px;
+    margin-bottom: 4px;
+  }
+  .r-edu-left { display: flex; flex-direction: column; }
+  .r-edu-school { font-weight: 700; font-size: var(--size-body); }
+  .r-edu-degree { font-style: italic; font-size: var(--size-body); }
+  .r-edu-detail { font-size: var(--size-small); color: #333; }
+  .r-edu-date { font-size: var(--size-body); white-space: nowrap; color: #333; }
+
+  /* ── SKILLS ── */
+  .r-skills-row {
+    font-size: var(--size-body);
+    line-height: 1.5;
+    margin-bottom: 2px;
+  }
+  .r-skills-row strong { font-weight: 700; }
+
+  /* ── CERTS ── */
+  .r-certs {
+    font-size: var(--size-body);
+    line-height: 1.5;
+  }
+  .r-certs strong { font-weight: 700; }
+
+  /* ── RESEARCH (same as entry) ── */
+
+  /* ── PRINT ── */
+  @media print {
+    html, body {
+      background: none;
+      padding: 0;
+      margin: 0;
+    }
+    .page {
+      width: 100%;
+      min-height: 100%;
+      box-shadow: none;
+      padding: var(--margin-y) var(--margin-x);
+    }
+    @page {
+      size: letter;
+      margin: 0;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <div class="r-name">Loknath Sai Gurijala</div>
+  <div class="r-contact">
+    <a href="mailto:loknathsai.gurijala@gmail.com">loknathsai.gurijala@gmail.com</a>
+    <span class="sep">|</span>
+    <a href="https://github.com/loki1512" target="_blank">github.com/loki1512</a>
+    <span class="sep">|</span>
+    <a href="https://www.linkedin.com/in/loknath-sai-gurijala-27b179203/" target="_blank">linkedin.com/in/loknath-sai-gurijala</a>
+    <span class="sep">|</span>
+    <a href="https://loki1512.github.io/profile" target="_blank">loki1512.github.io/profile</a>
+  </div>
+
+  <!-- ═══════════ EDUCATION ═══════════ -->
+  <div class="r-section">
+    <div class="r-section-title">Education</div>
+
+    <div class="r-edu-row">
+      <div class="r-edu-left">
+        <span class="r-edu-school">Vellore Institute of Technology (VIT)</span>
+        <span class="r-edu-degree">B.Tech — Electrical &amp; Electronics Engineering</span>
+        <span class="r-edu-detail">CGPA: 8.94 / 10</span>
+      </div>
+      <span class="r-edu-date">2019 – 2023</span>
+    </div>
+
+    <div class="r-edu-row">
+      <div class="r-edu-left">
+        <span class="r-edu-school">Indian Institute of Technology Madras (IIT Madras)</span>
+        <span class="r-edu-degree">BS Degree — Data Science &amp; Applications</span>
+        <span class="r-edu-detail">Diploma Level Completed &nbsp;·&nbsp; Online Degree Programme</span>
+      </div>
+      <span class="r-edu-date">2021 – Present</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ EXPERIENCE ═══════════ -->
+  <div class="r-section">
+    <div class="r-section-title">Experience</div>
+
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <div class="r-entry-left">
+          <span class="r-org">Tata Consultancy Services</span>
+          <span class="r-role">Systems Engineer — ZIA Delivery Specialist</span>
+        </div>
+        <span class="r-date">2023 – 2024</span>
+      </div>
+      <ul class="r-bullets">
+        <li>Managed ZIA policy configuration, access governance and secure internet workflow deployments for enterprise clients.</li>
+        <li>Acted as Scrum Master during enterprise onboarding project simulations, coordinating sprint ceremonies and backlog grooming.</li>
+        <li>Developed a full-stack electricity billing system using Java during training; project received internal <em>Best Team</em> recognition.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ═══════════ PROJECTS ═══════════ -->
+  <div class="r-section">
+    <div class="r-section-title">Projects</div>
+
+    <!-- KSA 3.0 -->
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <div class="r-entry-left">
+          <span class="r-org">KSA 3.0 — Retail ERP</span>
+          <span class="r-role">Python · Flask · PostgreSQL · Vue JS</span>
+        </div>
+        <span class="r-date">2024</span>
+      </div>
+      <ul class="r-bullets">
+        <li>Designed a retail ERP around real billing patterns observed at hardware stores — including round-figure negotiations and credit tracking.</li>
+        <li>Implemented a "final amount" input mode so sales staff can enter negotiated totals directly, bypassing fixed-discount workflows.</li>
+        <li>Added static keyword locking for repetitive product categories (e.g. PVC fittings) to reduce repeated search input during bulk billing sessions.</li>
+        <li>Optimised PostgreSQL queries for large ledger histories and high-volume customer record retrieval.</li>
+      </ul>
+    </div>
+
+    <!-- DR Detection -->
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <div class="r-entry-left">
+          <span class="r-org">Diabetic Retinopathy Detection</span>
+          <span class="r-role">EfficientNet-B0 · Python · CNN Pipelines</span>
+        </div>
+        <span class="r-date">2023 – 2024</span>
+      </div>
+      <ul class="r-bullets">
+        <li>Built a two-stage detection pipeline: binary classification filters positive cases, which are then passed to a severity-grading model.</li>
+        <li>Selected EfficientNet-B0 specifically for lightweight deployment on affordable clinic hardware rather than GPU-heavy infrastructure.</li>
+        <li>Published at IEEE SCES 2024; received <strong>Best Paper Award</strong>.</li>
+      </ul>
+    </div>
+
+    <!-- Quantum Quiz -->
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <div class="r-entry-left">
+          <span class="r-org">Quantum Quiz</span>
+          <span class="r-role">LLM Pipelines · Transcript-Driven Generation</span>
+        </div>
+        <span class="r-date">2024</span>
+      </div>
+      <ul class="r-bullets">
+        <li>Developed lecture-sequenced quiz generation from course transcripts, slides and notes to reinforce understanding after each class.</li>
+        <li>Deliberately excluded speed/streak mechanics — quantum concepts benefit from depth of recall over rapid-fire recall patterns.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ═══════════ RESEARCH ═══════════ -->
+  <div class="r-section">
+    <div class="r-section-title">Research</div>
+
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <div class="r-entry-left">
+          <span class="r-org">Power System Optimisation</span>
+          <span class="r-role">Grey Wolf Optimizer · Distribution Systems</span>
+        </div>
+      </div>
+      <ul class="r-bullets">
+        <li>Applied Grey Wolf Optimizer-based metaheuristics for distribution network reconfiguration and loss minimisation.</li>
+      </ul>
+    </div>
+
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <div class="r-entry-left">
+          <span class="r-org">Medical AI — DR Detection</span>
+          <span class="r-role">IEEE SCES 2024 · Best Paper Award</span>
+        </div>
+      </div>
+      <ul class="r-bullets">
+        <li>Research centred on deployable DR detection workflows optimised for resource-constrained clinical environments.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ═══════════ SKILLS ═══════════ -->
+  <div class="r-section">
+    <div class="r-section-title">Technical Skills</div>
+
+    <div class="r-skills-row">
+      <strong>Languages:</strong> Python, SQL, JavaScript, Vue JS
+    </div>
+    <div class="r-skills-row">
+      <strong>Data Science:</strong> Pandas, NumPy, Statistics, Analytics
+    </div>
+    <div class="r-skills-row">
+      <strong>ML &amp; AI:</strong> CNNs, EfficientNet, ML Pipelines, Model Optimisation
+    </div>
+    <div class="r-skills-row">
+      <strong>Systems:</strong> Flask, REST APIs, PostgreSQL, Server-Side Rendering
+    </div>
+    <div class="r-skills-row">
+      <strong>Certifications:</strong> Microsoft AI-900, AZ-900, DP-900 &nbsp;·&nbsp; NPTEL Quantum Computing &nbsp;·&nbsp; ZIA Delivery Specialist &nbsp;·&nbsp; Wiser AQV
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
