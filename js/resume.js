@@ -59,6 +59,38 @@ style.innerHTML = `
         transform:translateY(0);
     }
 }
+
+/* ================================= */
+/* CERT BUTTONS — CLICKABLE          */
+/* ================================= */
+
+.cert-wrap span{
+    cursor:pointer;
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+.cert-wrap span:hover{
+    background:rgba(0,212,255,.18);
+    border-color:rgba(0,212,255,.45);
+    transform:translateY(-2px);
+}
+
+.cert-wrap span a{
+    display:block;
+    width:100%;
+    height:100%;
+    color:whitesmoke;
+    text-decoration:none;
+    font-weight:500;
+    pointer-events:auto;
+}
+
+.cert-wrap span a:hover{
+    color:#ffffff;
+}
 `;
 
 document.head.appendChild(style);
@@ -80,7 +112,7 @@ document.getElementById("resume-qr"),
 
     colorDark:"#ffffff",
 
-    #colorLight:"#ffffff",
+    colorLight:"#07111f",   /* fixed: removed stray # prefix */
 
     correctLevel:
     QRCode.CorrectLevel.H
