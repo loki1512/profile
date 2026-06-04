@@ -1,345 +1,1117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Loknath Sai Gurijala — Resume</title>
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Loknath Sai Gurijala — Resume
+</title>
+
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap');
 
-  :root {
-    --page-w: 8.5in;
-    --page-h: 11in;
-    --margin-x: 0.55in;
-    --margin-y: 0.38in;
-    --body-font: 'EB Garamond', Georgia, serif;
-    --ink: #111;
-    --rule: #888;
-    --size-name: 26pt;
-    --size-section: 10.5pt;
-    --size-body: 10pt;
-    --size-small: 9.5pt;
-  }
+*,
+*::before,
+*::after{
 
-  html, body {
-    background: #d4cfc8;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 32px 16px;
-    font-family: var(--body-font);
-  }
+    box-sizing:border-box;
 
-  /* ── PAGE ── */
-  .page {
-    width: var(--page-w);
-    min-height: var(--page-h);
-    background: #fff;
-    color: var(--ink);
-    padding: var(--margin-y) var(--margin-x);
-    box-shadow: 0 4px 40px rgba(0,0,0,.22);
-    position: relative;
-  }
+    margin:0;
+    padding:0;
+}
 
-  /* ── HEADER ── */
-  .r-name {
-    text-align: center;
-    font-size: var(--size-name);
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    line-height: 1.1;
-    margin-bottom: 4px;
-  }
+:root{
 
-  .r-contact {
-    text-align: center;
-    font-size: var(--size-small);
-    color: #333;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0 6px;
-    line-height: 1.6;
-  }
+    --page-w:8.5in;
+    --page-h:11in;
 
-  .r-contact a { color: inherit; text-decoration: none; }
-  .r-contact a:hover { text-decoration: underline; }
-  .r-contact .sep { color: var(--rule); }
+    --margin-x:.55in;
+    --margin-top:.65in;
+    --margin-bottom:.38in;
 
-  /* ── SECTION ── */
-  .r-section { margin-top: 7px; }
+    --ink:#111;
+    --muted:#444;
+    --rule:#888;
 
-  .r-section-title {
-    font-size: var(--size-section);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    border-bottom: 1.2px solid var(--ink);
-    padding-bottom: 1px;
-    margin-bottom: 4px;
-  }
+    --font:'EB Garamond', serif;
 
-  /* ── ENTRY (experience / project) ── */
-  .r-entry { margin-bottom: 5px; }
+    --size-name:26pt;
+    --size-section:10.5pt;
+    --size-body:10pt;
+    --size-small:9.2pt;
+}
 
-  .r-entry-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 2px 8px;
-  }
+/* ================================= */
+/* BASE */
+/* ================================= */
 
-  .r-entry-left { display: flex; flex-direction: column; gap: 0; }
+html,
+body{
 
-  .r-org {
-    font-size: var(--size-body);
-    font-weight: 700;
-    line-height: 1.3;
-  }
+    background:#d8d3cb;
 
-  .r-role {
-    font-size: var(--size-body);
-    font-style: italic;
-    line-height: 1.3;
-  }
+    min-height:100vh;
 
-  .r-date {
-    font-size: var(--size-body);
-    white-space: nowrap;
-    color: #333;
-  }
+    display:flex;
 
-  /* ── BULLETS ── */
-  .r-bullets {
-    margin-top: 2px;
-    padding-left: 14px;
-    list-style: disc;
-  }
+    justify-content:center;
 
-  .r-bullets li {
-    font-size: var(--size-body);
-    line-height: 1.38;
-    margin-bottom: 1px;
-    color: #1a1a1a;
-  }
+    align-items:flex-start;
 
-  /* ── EDUCATION GRID ── */
-  .r-edu-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 2px 8px;
-    margin-bottom: 4px;
-  }
-  .r-edu-left { display: flex; flex-direction: column; }
-  .r-edu-school { font-weight: 700; font-size: var(--size-body); }
-  .r-edu-degree { font-style: italic; font-size: var(--size-body); }
-  .r-edu-detail { font-size: var(--size-small); color: #333; }
-  .r-edu-date { font-size: var(--size-body); white-space: nowrap; color: #333; }
+    padding:32px 16px;
 
-  /* ── SKILLS ── */
-  .r-skills-row {
-    font-size: var(--size-body);
-    line-height: 1.5;
-    margin-bottom: 2px;
-  }
-  .r-skills-row strong { font-weight: 700; }
+    font-family:var(--font);
 
-  /* ── CERTS ── */
-  .r-certs {
-    font-size: var(--size-body);
-    line-height: 1.5;
-  }
-  .r-certs strong { font-weight: 700; }
+    color:var(--ink);
+}
 
-  /* ── RESEARCH (same as entry) ── */
+/* ================================= */
+/* PAGE */
+/* ================================= */
 
-  /* ── PRINT ── */
-  @media print {
-    html, body {
-      background: none;
-      padding: 0;
-      margin: 0;
+.page{
+
+    width:var(--page-w);
+
+    min-height:var(--page-h);
+
+    background:white;
+
+    color:var(--ink);
+
+    padding:
+    var(--margin-top)
+    var(--margin-x)
+    var(--margin-bottom)
+    var(--margin-x);
+
+    box-shadow:
+    0 5px 40px rgba(0,0,0,.18);
+
+    position:relative;
+}
+
+/* ================================= */
+/* HEADER */
+/* ================================= */
+
+.r-name{
+
+    text-align:center;
+
+    font-size:var(--size-name);
+
+    font-weight:700;
+
+    line-height:1.05;
+
+    margin-bottom:6px;
+
+    letter-spacing:.01em;
+}
+
+/* ================================= */
+/* CONTACTS */
+/* ================================= */
+
+.r-contact{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:0 8px;
+
+    font-size:var(--size-small);
+
+    color:var(--muted);
+
+    line-height:1.5;
+
+    margin-bottom:12px;
+}
+
+.r-contact a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+    transition:opacity .2s ease;
+}
+
+.r-contact a:hover{
+
+    opacity:.72;
+}
+
+.sep{
+
+    color:#888;
+}
+
+/* ================================= */
+/* SECTIONS */
+/* ================================= */
+
+.r-section{
+
+    margin-top:11px;
+
+    break-inside:avoid;
+
+    page-break-inside:avoid;
+}
+
+.r-section-title{
+
+    font-size:var(--size-section);
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+    border-bottom:
+    1.2px solid black;
+
+    padding-bottom:2px;
+
+    margin-bottom:6px;
+
+    break-after:avoid;
+
+    page-break-after:avoid;
+}
+
+/* ================================= */
+/* SUMMARY */
+/* ================================= */
+
+.r-summary{
+
+    font-size:var(--size-body);
+
+    line-height:1.45;
+
+    color:#222;
+
+    margin-top:2px;
+}
+
+/* ================================= */
+/* ENTRIES */
+/* ================================= */
+
+.r-entry{
+
+    margin-bottom:8px;
+
+    break-inside:avoid;
+
+    page-break-inside:avoid;
+}
+
+.r-entry-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:baseline;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    break-after:avoid;
+
+    page-break-after:avoid;
+}
+
+.r-entry-left{
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.r-org{
+
+    font-size:var(--size-body);
+
+    font-weight:700;
+}
+
+.r-role{
+
+    font-size:var(--size-body);
+
+    font-style:italic;
+
+    color:#222;
+}
+
+.r-date{
+
+    font-size:var(--size-small);
+
+    color:var(--muted);
+
+    white-space:nowrap;
+}
+
+/* ================================= */
+/* BULLETS */
+/* ================================= */
+
+.r-bullets{
+
+    margin-top:3px;
+
+    padding-left:16px;
+
+    break-inside:avoid;
+
+    page-break-inside:avoid;
+}
+
+.r-bullets li{
+
+    font-size:var(--size-body);
+
+    line-height:1.38;
+
+    margin-bottom:2px;
+
+    color:#1a1a1a;
+}
+
+/* ================================= */
+/* EDUCATION */
+/* ================================= */
+
+.r-edu-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:baseline;
+
+    gap:10px;
+
+    margin-bottom:7px;
+
+    break-inside:avoid;
+
+    page-break-inside:avoid;
+}
+
+.r-edu-left{
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.r-edu-school{
+
+    font-size:var(--size-body);
+
+    font-weight:700;
+}
+
+.r-edu-degree{
+
+    font-size:var(--size-body);
+
+    font-style:italic;
+}
+
+.r-edu-detail{
+
+    font-size:var(--size-small);
+
+    color:var(--muted);
+}
+
+.r-edu-date{
+
+    font-size:var(--size-small);
+
+    color:var(--muted);
+
+    white-space:nowrap;
+}
+
+/* ================================= */
+/* SKILLS */
+/* ================================= */
+
+.r-skills-row{
+
+    font-size:var(--size-body);
+
+    line-height:1.5;
+
+    margin-bottom:3px;
+}
+
+.r-skills-row strong{
+
+    font-weight:700;
+}
+
+/* ================================= */
+/* LINKS */
+/* ================================= */
+
+a{
+
+    color:inherit;
+}
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+
+@media(max-width:900px){
+
+    html,
+    body{
+
+        padding:18px 10px;
     }
-    .page {
-      width: 100%;
-      min-height: 100%;
-      box-shadow: none;
-      padding: var(--margin-y) var(--margin-x);
+
+    .page{
+
+        width:100%;
+
+        min-height:auto;
+
+        padding:
+        .55in
+        .34in
+        .42in
+        .34in;
     }
-    @page {
-      size: letter;
-      margin: 0;
+
+    .r-name{
+
+        font-size:22pt;
     }
-  }
+
+    .r-contact{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:2px;
+    }
+
+    .sep{
+
+        display:none;
+    }
+
+    .r-entry-header,
+    .r-edu-row{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:2px;
+    }
+
+    .r-date,
+    .r-edu-date{
+
+        margin-top:1px;
+    }
+}
+
+/* ================================= */
+/* PRINT */
+/* ================================= */
+
+@media print{
+
+    html,
+    body{
+
+        background:white;
+
+        margin:0;
+
+        padding:0;
+    }
+
+    @page{
+
+        size:letter;
+
+        margin:
+        .55in
+        .28in
+        .35in
+        .28in;
+    }
+
+    .page{
+
+        width:100%;
+
+        min-height:100%;
+
+        padding:
+        .55in
+        .5in
+        .45in
+        .5in;
+
+        box-shadow:none;
+
+        position:relative;
+    }
+
+    /* ================================= */
+    /* PAGE FLOW */
+    /* ================================= */
+
+    .r-section,
+    .r-entry,
+    .r-edu-row{
+
+        break-inside:avoid;
+
+        page-break-inside:avoid;
+    }
+
+    .r-entry-header,
+    .r-section-title{
+
+        break-after:avoid;
+
+        page-break-after:avoid;
+    }
+
+    .r-bullets{
+
+        break-inside:avoid;
+
+        page-break-inside:avoid;
+    }
+
+    /* ================================= */
+    /* SPACING */
+    /* ================================= */
+
+    .r-section{
+
+        margin-top:12px;
+    }
+
+    .r-entry{
+
+        margin-bottom:10px;
+    }
+
+    /* ================================= */
+    /* LINK CLEANUP */
+    /* ================================= */
+
+    a{
+
+        text-decoration:none;
+
+        color:black;
+    }
+}
+
 </style>
+
 </head>
+
 <body>
+
 <div class="page">
 
-  <!-- ═══════════ HEADER ═══════════ -->
-  <div class="r-name">Loknath Sai Gurijala</div>
-  <div class="r-contact">
-    <a href="mailto:loknathsai.gurijala@gmail.com">loknathsai.gurijala@gmail.com</a>
-    <span class="sep">|</span>
-    <a href="https://github.com/loki1512" target="_blank">github.com/loki1512</a>
-    <span class="sep">|</span>
-    <a href="https://www.linkedin.com/in/loknath-sai-gurijala-27b179203/" target="_blank">linkedin.com/in/loknath-sai-gurijala</a>
-    <span class="sep">|</span>
-    <a href="https://loki1512.github.io/profile" target="_blank">loki1512.github.io/profile</a>
-  </div>
+    <!-- ============================= -->
+    <!-- HEADER -->
+    <!-- ============================= -->
 
-  <!-- ═══════════ EDUCATION ═══════════ -->
-  <div class="r-section">
-    <div class="r-section-title">Education</div>
+    <div class="r-name">
 
-    <div class="r-edu-row">
-      <div class="r-edu-left">
-        <span class="r-edu-school">Vellore Institute of Technology (VIT)</span>
-        <span class="r-edu-degree">B.Tech — Electrical &amp; Electronics Engineering</span>
-        <span class="r-edu-detail">CGPA: 8.94 / 10</span>
-      </div>
-      <span class="r-edu-date">2019 – 2023</span>
+        Loknath Sai Gurijala
+
     </div>
 
-    <div class="r-edu-row">
-      <div class="r-edu-left">
-        <span class="r-edu-school">Indian Institute of Technology Madras (IIT Madras)</span>
-        <span class="r-edu-degree">BS Degree — Data Science &amp; Applications</span>
-        <span class="r-edu-detail">Diploma Level Completed &nbsp;·&nbsp; Online Degree Programme</span>
-      </div>
-      <span class="r-edu-date">2021 – Present</span>
+    <div class="r-contact">
+
+        <a href="mailto:loknathsai.gurijala@gmail.com">
+            loknathsai.gurijala@gmail.com
+        </a>
+
+        <span class="sep">|</span>
+
+        <a
+        href="https://github.com/loki1512"
+        target="_blank">
+
+            github.com/loki1512
+
+        </a>
+
+        <span class="sep">|</span>
+
+        <a
+        href="https://www.linkedin.com/in/loknath-sai-gurijala-27b179203/"
+        target="_blank">
+
+            linkedin.com/in/loknath-sai-gurijala
+
+        </a>
+
+        <span class="sep">|</span>
+
+        <a
+        href="https://loki1512.github.io/profile"
+        target="_blank">
+
+            loki1512.github.io/profile
+
+        </a>
+
     </div>
-  </div>
 
-  <!-- ═══════════ EXPERIENCE ═══════════ -->
-  <div class="r-section">
-    <div class="r-section-title">Experience</div>
+    <!-- ============================= -->
+    <!-- EDUCATION -->
+    <!-- ============================= -->
 
-    <div class="r-entry">
-      <div class="r-entry-header">
-        <div class="r-entry-left">
-          <span class="r-org">Tata Consultancy Services</span>
-          <span class="r-role">Systems Engineer — ZIA Delivery Specialist</span>
+    <div class="r-section">
+
+        <div class="r-section-title">
+            Education
         </div>
-        <span class="r-date">2023 – 2024</span>
-      </div>
-      <ul class="r-bullets">
-        <li>Managed ZIA policy configuration, access governance and secure internet workflow deployments for enterprise clients.</li>
-        <li>Acted as Scrum Master during enterprise onboarding project simulations, coordinating sprint ceremonies and backlog grooming.</li>
-        <li>Developed a full-stack electricity billing system using Java during training; project received internal <em>Best Team</em> recognition.</li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- ═══════════ PROJECTS ═══════════ -->
-  <div class="r-section">
-    <div class="r-section-title">Projects</div>
+        <div class="r-edu-row">
 
-    <!-- KSA 3.0 -->
-    <div class="r-entry">
-      <div class="r-entry-header">
-        <div class="r-entry-left">
-          <span class="r-org">KSA 3.0 — Retail ERP</span>
-          <span class="r-role">Python · Flask · PostgreSQL · Vue JS</span>
+            <div class="r-edu-left">
+
+                <span class="r-edu-school">
+                    Vellore Institute of Technology (VIT)
+                </span>
+
+                <span class="r-edu-degree">
+                    B.Tech — Electrical & Electronics Engineering
+                </span>
+
+                <span class="r-edu-detail">
+                    CGPA: 8.94 / 10
+                </span>
+
+            </div>
+
+            <span class="r-edu-date">
+                2019 – 2023
+            </span>
+
         </div>
-        <span class="r-date">2024</span>
-      </div>
-      <ul class="r-bullets">
-        <li>Designed a retail ERP around real billing patterns observed at hardware stores — including round-figure negotiations and credit tracking.</li>
-        <li>Implemented a "final amount" input mode so sales staff can enter negotiated totals directly, bypassing fixed-discount workflows.</li>
-        <li>Added static keyword locking for repetitive product categories (e.g. PVC fittings) to reduce repeated search input during bulk billing sessions.</li>
-        <li>Optimised PostgreSQL queries for large ledger histories and high-volume customer record retrieval.</li>
-      </ul>
-    </div>
 
-    <!-- DR Detection -->
-    <div class="r-entry">
-      <div class="r-entry-header">
-        <div class="r-entry-left">
-          <span class="r-org">Diabetic Retinopathy Detection</span>
-          <span class="r-role">EfficientNet-B0 · Python · CNN Pipelines</span>
+        <div class="r-edu-row">
+
+            <div class="r-edu-left">
+
+                <span class="r-edu-school">
+                    Indian Institute of Technology Madras
+                </span>
+
+                <span class="r-edu-degree">
+                    BS Degree — Data Science & Applications
+                </span>
+
+                <span class="r-edu-detail">
+                    Diploma Level Completed
+                </span>
+
+            </div>
+
+            <span class="r-edu-date">
+                2021 – Present
+            </span>
+
         </div>
-        <span class="r-date">2023 – 2024</span>
-      </div>
-      <ul class="r-bullets">
-        <li>Built a two-stage detection pipeline: binary classification filters positive cases, which are then passed to a severity-grading model.</li>
-        <li>Selected EfficientNet-B0 specifically for lightweight deployment on affordable clinic hardware rather than GPU-heavy infrastructure.</li>
-        <li>Published at IEEE SCES 2024; received <strong>Best Paper Award</strong>.</li>
-      </ul>
+
     </div>
 
-    <!-- Quantum Quiz -->
-    <div class="r-entry">
-      <div class="r-entry-header">
-        <div class="r-entry-left">
-          <span class="r-org">Quantum Quiz</span>
-          <span class="r-role">LLM Pipelines · Transcript-Driven Generation</span>
+    <!-- ============================= -->
+    <!-- SUMMARY -->
+    <!-- ============================= -->
+
+    <div class="r-section">
+      <div class="r-section-title">
+            Professional Summary
         </div>
-        <span class="r-date">2024</span>
-      </div>
-      <ul class="r-bullets">
-        <li>Developed lecture-sequenced quiz generation from course transcripts, slides and notes to reinforce understanding after each class.</li>
-        <li>Deliberately excluded speed/streak mechanics — quantum concepts benefit from depth of recall over rapid-fire recall patterns.</li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- ═══════════ RESEARCH ═══════════ -->
-  <div class="r-section">
-    <div class="r-section-title">Research</div>
+        <div class="r-summary">
 
-    <div class="r-entry">
-      <div class="r-entry-header">
-        <div class="r-entry-left">
-          <span class="r-org">Power System Optimisation</span>
-          <span class="r-role">Grey Wolf Optimizer · Distribution Systems</span>
+            Systems-oriented engineer interested in
+            analytics, workflow design and practical AI applications.
+
+            Most of my projects started from observing
+            how people actually work —
+            from retail billing and credit tracking
+            to learning systems and lightweight medical AI.
+
         </div>
-      </div>
-      <ul class="r-bullets">
-        <li>Applied Grey Wolf Optimizer-based metaheuristics for distribution network reconfiguration and loss minimisation.</li>
-      </ul>
+
     </div>
 
-    <div class="r-entry">
-      <div class="r-entry-header">
-        <div class="r-entry-left">
-          <span class="r-org">Medical AI — DR Detection</span>
-          <span class="r-role">IEEE SCES 2024 · Best Paper Award</span>
+    <!-- ============================= -->
+    <!-- EXPERIENCE -->
+    <!-- ============================= -->
+
+    <div class="r-section">
+
+        <div class="r-section-title">
+            Experience
         </div>
-      </div>
-      <ul class="r-bullets">
-        <li>Research centred on deployable DR detection workflows optimised for resource-constrained clinical environments.</li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- ═══════════ SKILLS ═══════════ -->
-  <div class="r-section">
-    <div class="r-section-title">Technical Skills</div>
+        <div class="r-entry">
 
-    <div class="r-skills-row">
-      <strong>Languages:</strong> Python, SQL, JavaScript, Vue JS
+            <div class="r-entry-header">
+
+                <div class="r-entry-left">
+
+                    <span class="r-org">
+                        Tata Consultancy Services
+                    </span>
+
+                    <span class="r-role">
+                        Systems Engineer — ZIA Delivery Specialist
+                    </span>
+
+                </div>
+
+                <span class="r-date">
+                    2024 - 2025
+                </span>
+
+            </div>
+
+            <ul class="r-bullets">
+
+                <li>
+
+                    Worked on ZIA policy configuration,
+                    access governance and secure internet workflows
+                    while coordinating deployment-related activities
+                    across enterprise environments.
+
+                </li>
+
+                <li>
+
+                    Acted as Scrum Master during enterprise onboarding
+                    project simulations and sprint coordination exercises.
+
+                </li>
+
+                <li>
+
+                    Developed a full-stack electricity billing system
+                    during training using Java Full Stack concepts;
+                    project received internal Best Team recognition.
+
+                </li>
+
+            </ul>
+
+        </div>
+
     </div>
-    <div class="r-skills-row">
-      <strong>Data Science:</strong> Pandas, NumPy, Statistics, Analytics
+    <!-- ============================= -->
+    <!-- SKILLS -->
+    <!-- ============================= -->
+
+    <div class="r-section">
+
+        <div class="r-section-title">
+            Technical Skills
+        </div>
+
+        <div class="r-skills-row">
+
+            <strong>Languages:</strong>
+            Python, SQL, JavaScript, Vue JS
+
+        </div>
+
+        <div class="r-skills-row">
+
+            <strong>Data Science:</strong>
+            Pandas, NumPy, Statistics,
+            Matplotlib, Seaborn,
+            Data Analysis
+
+        </div>
+
+        <div class="r-skills-row">
+
+            <strong>ML & AI:</strong>
+            CNNs, EfficientNet,
+            Classification Pipelines,
+            Prompt-Based Workflows
+
+        </div>
+
+        <div class="r-skills-row">
+
+            <strong>Systems:</strong>
+            Flask, REST APIs,
+            PostgreSQL, Jinja2 SSR
+
+        </div>
+
+        <div class="r-skills-row">
+
+            <strong>Certifications:</strong>
+            Microsoft AI-900, AZ-900, DP-900 ·
+            NPTEL Quantum Computing ·
+            ZIA Delivery Specialist ·
+            Wiser AQV
+
+        </div>
+
     </div>
-    <div class="r-skills-row">
-      <strong>ML &amp; AI:</strong> CNNs, EfficientNet, ML Pipelines, Model Optimisation
+
+    <!-- ============================= -->
+    <!-- PROJECTS -->
+    <!-- ============================= -->
+
+    <div class="r-section">
+
+        <div class="r-section-title">
+            Projects
+        </div>
+
+        <!-- KSA -->
+
+        <div class="r-entry">
+
+            <div class="r-entry-header">
+
+                <div class="r-entry-left">
+
+                    <span class="r-org">
+                        KSA 3.0 — Retail ERP & Analytics
+                    </span>
+
+                    <span class="r-role">
+                        Python · Flask · PostgreSQL · Vue JS
+                    </span>
+
+                </div>
+
+                <span class="r-date">
+                    2025 - Ongoing
+                </span>
+
+            </div>
+
+            <ul class="r-bullets">
+
+                <li>
+
+                    Built after observing billing and credit workflows
+                    at a hardware retail store where negotiations,
+                    returns and delayed payments are common.
+
+                </li>
+
+                <li>
+
+                    Designed a reverse calculation workflow where
+                    the final negotiated amount can be entered directly
+                    and discounts are derived automatically.
+
+                </li>
+
+                <li>
+
+                    Developed a Google-like product search system
+                    tolerant to fragmented queries like
+                    "2 pvc mta", "mta 63" or "63 pv m"
+                    to reduce friction during fast billing.
+
+                </li>
+
+                <li>
+
+                    Built integrated ledgers supporting
+                    multiple purchases, returns and payment tracking,
+                    while separating revenue from actual cash inflow
+                    for clearer operational visibility.
+
+                </li>
+
+                <li>
+
+                    Developed monthly and yearly dashboards
+                    to analyse sales trends,
+                    customer credit behaviour
+                    and inventory movement patterns.
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- DR -->
+
+        <div class="r-entry">
+
+            <div class="r-entry-header">
+
+                <div class="r-entry-left">
+
+                    <span class="r-org">
+                        Diabetic Retinopathy Detection
+                    </span>
+
+                    <span class="r-role">
+                        EfficientNet-B0 · CNN Pipelines
+                    </span>
+
+                </div>
+
+                <span class="r-date">
+                    2024
+                </span>
+
+            </div>
+
+            <ul class="r-bullets">
+
+                <li>
+
+                    Designed a two-stage workflow where
+                    binary screening is performed first,
+                    followed by severity classification
+                    only for positive cases.
+
+                </li>
+
+                <li>
+
+                    Used EfficientNet-B0 intentionally because
+                    lightweight deployment is more practical
+                    for smaller clinics than GPU-heavy models.
+
+                </li>
+
+                <li>
+
+                    Focused on balancing deployment feasibility,
+                    inference cost and diagnostic accuracy
+                    instead of optimizing purely for benchmark scores.
+
+                </li>
+
+                <li>
+
+                    Published at <strong>SCES 2024</strong>;
+                    received <strong>Best Paper Award</strong> at the conference.  <a href="https://ieeexplore.ieee.org/abstract/document/10652422">[Read]</a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- QUANTUM -->
+
+        <div class="r-entry">
+
+            <div class="r-entry-header">
+
+                <div class="r-entry-left">
+
+                    <span class="r-org">
+                        Quantum Quiz
+                    </span>
+
+                    <span class="r-role">
+                        Transcript-Based Quiz Generation · Learning Workflows
+                    </span>
+
+                </div>
+
+                <span class="r-date">
+                    2026
+                </span>
+
+            </div>
+
+            <ul class="r-bullets">
+
+                <li>
+
+                    Built while learning quantum computing
+                    to reinforce lecture understanding through
+                    repeated conceptual reconstruction.
+
+                </li>
+
+                <li>
+
+                    Created transcript-driven workflows using
+                    lecture slides, transcripts and notes
+                    to generate progressive question sequences.
+
+                </li>
+
+                <li>
+
+                    Deliberately avoided speed-based mechanics
+                    because quantum concepts benefit more from
+                    depth of recall than rapid-fire memorization.
+
+                </li>
+
+                <li>
+
+                    Included coding-oriented questions
+                    to connect theoretical concepts
+                    with practical Qiskit usage.
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- CATTRACK -->
+
+        <div class="r-entry">
+
+            <div class="r-entry-header">
+
+                <div class="r-entry-left">
+
+                    <span class="r-org">
+                        CATTRACK
+                    </span>
+
+                    <span class="r-role">
+                        Personal Math Fluency Training System
+                    </span>
+
+                </div>
+
+                <span class="r-date">
+                    2026
+                </span>
+
+            </div>
+
+            <ul class="r-bullets">
+
+                <li>
+
+                    Built around the idea that users
+                    should compete against their own
+                    previous performance rather than global leaderboards.
+
+                </li>
+
+                <li>
+
+                    Tracks streaks, best times and level-wise progress
+                    across arithmetic fundamentals like fractions,
+                    percentages and mental calculations.
+
+                </li>
+
+                <li>
+
+                    Designed lightweight drill workflows
+                    to improve repetition, recall speed
+                    and accuracy through low-friction practice.
+
+                </li>
+
+            </ul>
+
+        </div>
+
     </div>
-    <div class="r-skills-row">
-      <strong>Systems:</strong> Flask, REST APIs, PostgreSQL, Server-Side Rendering
+    
+
+    <!-- ============================= -->
+    <!-- RESEARCH -->
+    <!-- ============================= -->
+
+    <div class="r-section">
+
+        <div class="r-section-title">
+            Research
+        </div>
+
+        <div class="r-entry">
+
+            <div class="r-entry-header">
+
+                <div class="r-entry-left">
+
+                    <span class="r-org">
+                        Power System Optimization
+                    </span>
+
+                    <span class="r-role">
+                        Grey Wolf Optimizer · Distribution Systems
+                    </span>
+
+                </div>
+
+            </div>
+
+            <ul class="r-bullets">
+
+                <li>
+
+                    Applied Grey Wolf Optimizer-based metaheuristics
+                    for distribution network reconfiguration
+                    and loss minimization.
+
+                </li>
+                <li>
+                  Published in <strong>Elsevier - Heliyon</strong>, 2024 <a href="https://www.cell.com/heliyon/fulltext/S2405-8440(24)02374-0">[Read]</a>
+                </li>
+
+            </ul>
+
+        </div>
+
     </div>
-    <div class="r-skills-row">
-      <strong>Certifications:</strong> Microsoft AI-900, AZ-900, DP-900 &nbsp;·&nbsp; NPTEL Quantum Computing &nbsp;·&nbsp; ZIA Delivery Specialist &nbsp;·&nbsp; Wiser AQV
-    </div>
-  </div>
+
+    
 
 </div>
+
 </body>
 </html>
