@@ -53,14 +53,13 @@ body{
 }
 
 .hero{
-    min-height:90vh;
-
     display:flex;
     align-items:center;
     justify-content:center;
 
     text-align:center;
-    padding:0 10%;
+
+    padding:120px 10% 60px;
 }
 
 .hero-tag{
@@ -113,7 +112,7 @@ body{
 }
 
 .section{
-    padding:120px 10%;
+    padding:70px 10%;
 }
 
 .section h3{
